@@ -3,6 +3,7 @@ import React from 'react';
 export default (props) => {
     console.log('Congrats, the setup is successful!');
     console.log('Props received are: ', props);
+    let title = props.block.main.header.title;
 
-    return <p className='text-lg text-gray-700 font-bold px-4 py-2 bg-gray-100'>{props.block.main.header.title}</p>;
+    return <p className='text-lg text-gray-700 font-bold px-4 py-2 bg-gray-100'>{title ? title : "Hello World"}</p>;
 };
